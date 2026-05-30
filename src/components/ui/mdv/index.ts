@@ -18,7 +18,7 @@ export { MdvStat, MdvStatGroup } from "./stat/mdv-stat";
 export type { MdvStatProps, MdvStatGroupProps } from "./stat/mdv-stat";
 
 /* ── Compound Components ─────────────────────────────── */
-export { MdvSidebar } from "./sidebar/mdv-sidebar";
+export { MdvSidebar, useMdvSidebar } from "./sidebar/mdv-sidebar";
 export { MdvProgramCard } from "./program-card/mdv-program-card";
 export { MdvMissionCard } from "./mission-card/mdv-mission-card";
 export { MdvSessionCard } from "./session-card/mdv-session-card";

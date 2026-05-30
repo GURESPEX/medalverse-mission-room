@@ -11,7 +11,7 @@ import Link from "next/link";
 import type { Route } from "next";
 import { usePathname } from "next/navigation";
 import { cn } from "@/src/lib/utils";
-import { ChevronDownIcon } from "@/src/components/ui/mdv/icons/mdv-icons";
+import { ChevronDownIcon, ChevronLeftIcon } from "@/src/components/ui/mdv/icons/mdv-icons";
 
 /* ── Context ─────────────────────────────────────────── */
 
@@ -26,6 +26,11 @@ const SidebarContext = createContext<SidebarContextValue>({
   toggle: () => {},
   isExpanded: () => false,
 });
+
+/** Access sidebar open/close state from any descendant. */
+export function useMdvSidebar() {
+  return useContext(SidebarContext);
+}
 
 /* ── Root ────────────────────────────────────────────── */
 
@@ -160,24 +165,35 @@ interface MdvSidebarPanelProps extends HTMLAttributes<HTMLDivElement> {
 function MdvSidebarPanel({
   forItem,
   children,
-  width = 220,
+  width = 230,
   className,
   ...props
 }: MdvSidebarPanelProps) {
   const { isExpanded } = useContext(SidebarContext);
-
-  if (!isExpanded(forItem)) return null;
+  const open = isExpanded(forItem);
 
   return (
     <div
       className={cn(
-        "h-full border-r border-mdv-neutral-200 bg-mdv-surface flex flex-col py-4 overflow-y-auto flex-shrink-0",
-        className
+        "h-full bg-mdv-surface flex-shrink-0 overflow-hidden",
+        "transition-[width] duration-300 ease-in-out",
+        open && "border-r border-mdv-neutral-200"
       )}
-      style={{ width }}
+      style={{ width: open ? width : 0 }}
+      aria-hidden={!open}
       {...props}
     >
-      {children}
+      {/* Fixed-width inner wrapper so content slides instead of reflowing */}
+      <div
+        className={cn(
+          "h-full flex flex-col py-4 overflow-y-auto transition-opacity duration-200",
+          open ? "opacity-100" : "opacity-0",
+          className
+        )}
+        style={{ width }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
@@ -187,14 +203,33 @@ function MdvSidebarPanel({
 interface MdvSidebarPanelHeaderProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   subtitle?: string;
+  /** When provided, renders a collapse chevron that calls this handler. */
+  onCollapse?: () => void;
 }
 
-function MdvSidebarPanelHeader({ title, subtitle, className, ...props }: MdvSidebarPanelHeaderProps) {
+function MdvSidebarPanelHeader({
+  title,
+  subtitle,
+  onCollapse,
+  className,
+  ...props
+}: MdvSidebarPanelHeaderProps) {
   return (
-    <div className={cn("px-4 mb-3", className)} {...props}>
-      <h2 className="text-sm font-semibold text-mdv-neutral-900 truncate">{title}</h2>
-      {subtitle && (
-        <p className="text-xs text-mdv-neutral-500 mt-0.5 leading-snug">{subtitle}</p>
+    <div className={cn("px-4 mb-3 flex items-start justify-between gap-2", className)} {...props}>
+      <div className="min-w-0">
+        <h2 className="text-sm font-semibold text-mdv-neutral-900 truncate">{title}</h2>
+        {subtitle && (
+          <p className="text-xs text-mdv-neutral-500 mt-0.5 leading-snug">{subtitle}</p>
+        )}
+      </div>
+      {onCollapse && (
+        <button
+          onClick={onCollapse}
+          aria-label="Collapse sidebar"
+          className="h-7 w-7 flex-shrink-0 flex items-center justify-center rounded-mdv-md text-mdv-neutral-400 hover:bg-mdv-neutral-100 hover:text-mdv-neutral-700 transition-colors"
+        >
+          <ChevronLeftIcon size={16} />
+        </button>
       )}
     </div>
   );

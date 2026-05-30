@@ -1,11 +1,9 @@
 "use client";
 
-import { MdvSidebar } from "@/src/components/ui/mdv/sidebar/mdv-sidebar";
+import { MdvSidebar, useMdvSidebar } from "@/src/components/ui/mdv/sidebar/mdv-sidebar";
 import { MdvAvatar } from "@/src/components/ui/mdv/avatar/mdv-avatar";
 import {
   TargetIcon,
-  TrophyIcon,
-  GridIcon,
   DashboardIcon,
   MissionsIcon,
   MentorsIcon,
@@ -13,6 +11,67 @@ import {
   SupportIcon,
   LogOutIcon,
 } from "@/src/components/ui/mdv/icons/mdv-icons";
+
+/* ── Panel content (needs sidebar context for collapse) ── */
+
+function MissionPanel() {
+  const { toggle } = useMdvSidebar();
+
+  return (
+    <>
+      {/* User info */}
+      <div className="flex items-center gap-3 px-4 pb-4 border-b border-mdv-neutral-200 mb-2">
+        <MdvAvatar initials="AR" size="md" />
+        <div className="min-w-0">
+          <p className="text-sm font-semibold text-mdv-neutral-900 truncate">Alex Rivers</p>
+          <p className="text-xs text-mdv-neutral-500 truncate">Academic Mentor</p>
+        </div>
+      </div>
+
+      <MdvSidebar.PanelHeader
+        title="Mission Room"
+        subtitle="Your academic workspace"
+        onCollapse={() => toggle("mission")}
+      />
+
+      <MdvSidebar.PanelItem
+        href="/mission-room/dashboard"
+        label="Dashboard"
+        icon={<DashboardIcon size={16} />}
+      />
+      <MdvSidebar.PanelItem
+        href="/mission-room/missions"
+        label="Missions"
+        icon={<MissionsIcon size={16} />}
+      />
+      <MdvSidebar.PanelItem
+        href="/mission-room/mentors"
+        label="Mentors"
+        icon={<MentorsIcon size={16} />}
+      />
+      <MdvSidebar.PanelItem
+        href="/mission-room/settings"
+        label="Settings"
+        icon={<SettingsIcon size={16} />}
+      />
+
+      <MdvSidebar.PanelFooter>
+        <MdvSidebar.PanelItem
+          href="/mission-room/dashboard"
+          label="Support"
+          icon={<SupportIcon size={16} />}
+        />
+        <MdvSidebar.PanelItem
+          href="/mission-room/dashboard"
+          label="Sign Out"
+          icon={<LogOutIcon size={16} />}
+        />
+      </MdvSidebar.PanelFooter>
+    </>
+  );
+}
+
+/* ── Sidebar ─────────────────────────────────────────── */
 
 export function MissionRoomSidebar() {
   return (
@@ -26,23 +85,12 @@ export function MissionRoomSidebar() {
           </div>
         </div>
 
-        <MdvSidebar.RailItem
-          id="credential"
-          icon={<TrophyIcon size={18} />}
-          label={"Credential\nCloud"}
-          href="/mission-room/dashboard"
-        />
+        {/* Only Mission Room */}
         <MdvSidebar.RailItem
           id="mission"
           icon={<TargetIcon size={18} />}
           label={"Mission\nRoom"}
           hasPanel
-        />
-        <MdvSidebar.RailItem
-          id="experience"
-          icon={<GridIcon size={18} />}
-          label={"Experience\nHub"}
-          href="/mission-room/dashboard"
         />
 
         <MdvSidebar.Spacer />
@@ -61,50 +109,7 @@ export function MissionRoomSidebar() {
 
       {/* ── Mission Room Panel ─────────────────────── */}
       <MdvSidebar.Panel forItem="mission">
-        {/* User info */}
-        <div className="flex items-center gap-3 px-4 pb-4 border-b border-mdv-neutral-200 mb-2">
-          <MdvAvatar initials="AR" size="md" />
-          <div className="min-w-0">
-            <p className="text-sm font-semibold text-mdv-neutral-900 truncate">Alex Rivers</p>
-            <p className="text-xs text-mdv-neutral-500 truncate">Academic Mentor</p>
-          </div>
-        </div>
-
-        <MdvSidebar.PanelHeader title="Mission Room" />
-
-        <MdvSidebar.PanelItem
-          href="/mission-room/dashboard"
-          label="Dashboard"
-          icon={<DashboardIcon size={16} />}
-        />
-        <MdvSidebar.PanelItem
-          href="/mission-room/missions"
-          label="Missions"
-          icon={<MissionsIcon size={16} />}
-        />
-        <MdvSidebar.PanelItem
-          href="/mission-room/mentors"
-          label="Mentors"
-          icon={<MentorsIcon size={16} />}
-        />
-        <MdvSidebar.PanelItem
-          href="/mission-room/settings"
-          label="Settings"
-          icon={<SettingsIcon size={16} />}
-        />
-
-        <MdvSidebar.PanelFooter>
-          <MdvSidebar.PanelItem
-            href="/mission-room/dashboard"
-            label="Support"
-            icon={<SupportIcon size={16} />}
-          />
-          <MdvSidebar.PanelItem
-            href="/mission-room/dashboard"
-            label="Sign Out"
-            icon={<LogOutIcon size={16} />}
-          />
-        </MdvSidebar.PanelFooter>
+        <MissionPanel />
       </MdvSidebar.Panel>
     </MdvSidebar>
   );

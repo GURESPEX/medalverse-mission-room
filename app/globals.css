@@ -6,7 +6,7 @@
   }
 
   body {
-    font-family: Inter, system-ui, -apple-system, sans-serif;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
     background-color: #f8fafc;
     color: #0f172a;
     -webkit-font-smoothing: antialiased;
@@ -55,7 +55,7 @@
   --color-mdv-surface-overlay: #f1f5f9;
 
   /* ── MDV Typography ──────────────────────────────── */
-  --font-family-mdv-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-family-mdv-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 
   /* ── MDV Border Radius ───────────────────────────── */
   --radius-mdv-xs: 4px;
