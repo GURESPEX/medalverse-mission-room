@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
 @theme {
   /* ── MDV Primary Blue ─────────────────────────────── */
   --color-mdv-primary-50: #eff6ff;

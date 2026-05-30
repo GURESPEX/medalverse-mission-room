@@ -27,6 +27,10 @@ export type { MdvPaginationProps } from "./pagination/mdv-pagination";
 export { MdvStepper } from "./stepper/mdv-stepper";
 export type { MdvStep, MdvStepStatus } from "./stepper/mdv-stepper";
 
+/* ── Layout ───────────────────────────────────────────── */
+export { MdvTopBar } from "./top-bar/mdv-top-bar";
+export type { MdvTopBarProps } from "./top-bar/mdv-top-bar";
+
 /* ── Icons ────────────────────────────────────────────── */
 export {
   TargetIcon,
