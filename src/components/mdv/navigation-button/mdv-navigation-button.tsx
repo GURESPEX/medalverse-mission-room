@@ -6,6 +6,6 @@ const MdvNavigationButton = (props: MdvNavigationButtonProps) => {
   return <button>{props.children}</button>;
 };
 
-export default MdvNavigationButton;
+export default React.memo(MdvNavigationButton);
 
 export type MdvNavigationButtonProps = React.PropsWithChildren<{}>;

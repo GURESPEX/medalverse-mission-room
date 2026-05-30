@@ -20,7 +20,7 @@ const MdvTypographyBody = (props: MdvTypographyBodyProps) => {
   );
 };
 
-export default MdvTypographyBody;
+export default React.memo(MdvTypographyBody);
 
 // --- Variants ---
 

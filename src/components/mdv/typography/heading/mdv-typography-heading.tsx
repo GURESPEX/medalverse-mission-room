@@ -70,7 +70,7 @@ const MdvTypographyHeading = (props: MdvTypographyHeadingProps) => {
   }
 };
 
-export default MdvTypographyHeading;
+export default React.memo(MdvTypographyHeading);
 
 // --- Variants ---
 

@@ -16,7 +16,7 @@ const MdvTypographyDisplay = (props: MdvTypographyDisplayProps) => {
   );
 };
 
-export default MdvTypographyDisplay;
+export default React.memo(MdvTypographyDisplay);
 
 // --- Variants ---
 

@@ -19,7 +19,7 @@ const MdvTypographyCaption = (props: MdvTypographyCaptionProps) => {
   );
 };
 
-export default MdvTypographyCaption;
+export default React.memo(MdvTypographyCaption);
 
 // --- Variants ---
 

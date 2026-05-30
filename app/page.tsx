@@ -1,4 +1,5 @@
 import MDV from "@/src/components/mdv";
+import { LibraryBig } from "lucide-react";
 
 const TEXT = "The quick brown fox jumps over the lazy dog";
 const BUTTON_TEXT = "Button";
@@ -10,7 +11,6 @@ export default function Page() {
         <div className="flex flex-col p-4">
           <MDV.Typography.Display size="large">{TEXT}</MDV.Typography.Display>
           <MDV.Typography.Display size="medium">{TEXT}</MDV.Typography.Display>
-
           <MDV.Typography.Heading size="heading-1">
             {TEXT}
           </MDV.Typography.Heading>
@@ -64,10 +64,1881 @@ export default function Page() {
           <MDV.Typography.Caption overline>{TEXT}</MDV.Typography.Caption>
           <MDV.Typography.Caption>{TEXT}</MDV.Typography.Caption>
         </div>
-        <div className="flex flex-col p-4">
-          <MDV.Button size="large">{BUTTON_TEXT}</MDV.Button>
-          <MDV.Button size="medium">{BUTTON_TEXT}</MDV.Button>
-          <MDV.Button size="small">{BUTTON_TEXT}</MDV.Button>
+        <div className="flex flex-col">
+          <div className="flex">
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button size="large">{BUTTON_TEXT}</MDV.Button>
+              <MDV.Button size="medium">{BUTTON_TEXT}</MDV.Button>
+              <MDV.Button size="small">{BUTTON_TEXT}</MDV.Button>
+              <MDV.Button size="large" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="medium" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="small" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="large" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="medium" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="small" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="large" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="medium" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button size="small" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button iconStart={<LibraryBig />} size="large">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="medium">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="small">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="large" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="medium" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="small" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="large" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="medium" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconStart={<LibraryBig />} size="small" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button iconEnd={<LibraryBig />} size="large">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="medium">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="small">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="large" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="medium" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="small" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="large" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="medium" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button iconEnd={<LibraryBig />} size="small" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button rounded iconStart={<LibraryBig />} size="large">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button rounded iconStart={<LibraryBig />} size="medium">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button rounded iconStart={<LibraryBig />} size="small">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button rounded iconEnd={<LibraryBig />} size="large">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button rounded iconEnd={<LibraryBig />} size="medium">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button rounded iconEnd={<LibraryBig />} size="small">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button rounded iconEnd={<LibraryBig />} size="large" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button rounded iconEnd={<LibraryBig />} size="small" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+          </div>
+          <div className="flex">
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button color="secondary" size="large">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="medium">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="small">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="large" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="medium" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="small" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="large" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="medium" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="small" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="large" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="medium" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="secondary" size="small" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="secondary"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+          </div>
+          <div className="flex">
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button color="danger" size="large">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="medium">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="small">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="large" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="medium" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="small" disabled>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="large" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="medium" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="small" loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="large" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="medium" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" size="small" disabled loading>
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button color="danger" iconEnd={<LibraryBig />} size="large">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" iconEnd={<LibraryBig />} size="medium">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button color="danger" iconEnd={<LibraryBig />} size="small">
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+            <div className="flex flex-col p-4 gap-1">
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="large"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="medium"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+              <MDV.Button
+                color="danger"
+                rounded
+                iconStart={<LibraryBig />}
+                iconEnd={<LibraryBig />}
+                size="small"
+                disabled
+                loading
+              >
+                {BUTTON_TEXT}
+              </MDV.Button>
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex p-4">

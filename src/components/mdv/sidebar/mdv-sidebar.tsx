@@ -35,6 +35,6 @@ const MdvSideBar = (props: MdvSideBarProps) => {
   );
 };
 
-export default MdvSideBar;
+export default React.memo(MdvSideBar);
 
 export type MdvSideBarProps = {};

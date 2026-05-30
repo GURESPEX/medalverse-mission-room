@@ -132,4 +132,36 @@
   --font-weight-mdv-medium: 500;
   --font-weight-mdv-semibold: 600;
   --font-weight-mdv-bold: 700;
+
+  /* ─── Spacing ─── */
+  --spacing-mdv-none: 0;
+  --spacing-mdv-xxs: 2px;
+  --spacing-mdv-xs: 4px;
+  --spacing-mdv-sm: 6px;
+  --spacing-mdv-md: 8px;
+  --spacing-mdv-lg: 12px;
+  --spacing-mdv-xl: 16px;
+  --spacing-mdv-2xl: 20px;
+  --spacing-mdv-3xl: 28px;
+  --spacing-mdv-4xl: 32px;
+  --spacing-mdv-5xl: 40px;
+  --spacing-mdv-6xl: 48px;
+  --spacing-mdv-7xl: 64px;
+  --spacing-mdv-8xl: 80px;
+  --spacing-mdv-9xl: 96px;
+  --spacing-mdv-10xl: 128px;
+  --spacing-mdv-11xl: 160px;
+
+  /* ─── Radius ─── */
+  --radius-mdv-none: 0;
+  --radius-mdv-xxs: 2px;
+  --radius-mdv-xs: 4px;
+  --radius-mdv-sm: 6px;
+  --radius-mdv-md: 8px;
+  --radius-mdv-lg: 10px;
+  --radius-mdv-xl: 12px;
+  --radius-mdv-2xl: 16px;
+  --radius-mdv-3xl: 20px;
+  --radius-mdv-4xl: 24px;
+  --radius-mdv-full: 9999px;
 }
