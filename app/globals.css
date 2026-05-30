@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* ── MDV Primary Blue ─────────────────────────────── */
+  --color-mdv-primary-50: #eff6ff;
+  --color-mdv-primary-100: #dbeafe;
+  --color-mdv-primary-200: #bfdbfe;
+  --color-mdv-primary-300: #93c5fd;
+  --color-mdv-primary-400: #60a5fa;
+  --color-mdv-primary-500: #3b82f6;
+  --color-mdv-primary-600: #2563eb;
+  --color-mdv-primary-700: #1d4ed8;
+  --color-mdv-primary-800: #1e40af;
+  --color-mdv-primary-900: #1e3a8a;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ── MDV Neutral (Slate) ──────────────────────────── */
+  --color-mdv-neutral-50: #f8fafc;
+  --color-mdv-neutral-100: #f1f5f9;
+  --color-mdv-neutral-200: #e2e8f0;
+  --color-mdv-neutral-300: #cbd5e1;
+  --color-mdv-neutral-400: #94a3b8;
+  --color-mdv-neutral-500: #64748b;
+  --color-mdv-neutral-600: #475569;
+  --color-mdv-neutral-700: #334155;
+  --color-mdv-neutral-800: #1e293b;
+  --color-mdv-neutral-900: #0f172a;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* ── MDV Semantic ────────────────────────────────── */
+  --color-mdv-success: #10b981;
+  --color-mdv-success-light: #d1fae5;
+  --color-mdv-warning: #f59e0b;
+  --color-mdv-warning-light: #fef3c7;
+  --color-mdv-error: #ef4444;
+  --color-mdv-error-light: #fee2e2;
+  --color-mdv-info: #3b82f6;
+  --color-mdv-info-light: #dbeafe;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* ── MDV Surface ─────────────────────────────────── */
+  --color-mdv-surface: #ffffff;
+  --color-mdv-surface-alt: #f8fafc;
+  --color-mdv-surface-overlay: #f1f5f9;
+
+  /* ── MDV Typography ──────────────────────────────── */
+  --font-family-mdv-sans: Inter, system-ui, -apple-system, sans-serif;
+
+  /* ── MDV Border Radius ───────────────────────────── */
+  --radius-mdv-xs: 4px;
+  --radius-mdv-sm: 6px;
+  --radius-mdv-md: 8px;
+  --radius-mdv-lg: 12px;
+  --radius-mdv-xl: 16px;
+  --radius-mdv-2xl: 20px;
+  --radius-mdv-full: 9999px;
+
+  /* ── MDV Shadows ─────────────────────────────────── */
+  --shadow-mdv-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-mdv-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-mdv-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+  --shadow-mdv-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.06);
+  --shadow-mdv-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.06);
 }
