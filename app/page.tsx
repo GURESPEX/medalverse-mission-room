@@ -1,4 +1,4 @@
-import MDV from "@/src/components/mdv/ui";
+import MDV from "@/src/components/mdv";
 
 const TEXT = "The quick brown fox jumps over the lazy dog";
 const BUTTON_TEXT = "Button";
