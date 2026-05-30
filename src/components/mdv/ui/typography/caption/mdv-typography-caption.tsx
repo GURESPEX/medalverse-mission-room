@@ -4,15 +4,17 @@ import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const MdvTypographyCaption = (props: MdvTypographyCaptionProps) => {
+  const { overline, ...elementProps } = props;
+
   return (
     <p
-      {...props}
+      {...elementProps}
       className={variants({
-        overline: props.overline,
-        className: props.className,
+        overline,
+        className: elementProps.className,
       })}
     >
-      {props.children}
+      {elementProps.children}
     </p>
   );
 };

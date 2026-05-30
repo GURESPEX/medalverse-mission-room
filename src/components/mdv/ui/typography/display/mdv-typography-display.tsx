@@ -4,12 +4,14 @@ import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const MdvTypographyDisplay = (props: MdvTypographyDisplayProps) => {
+  const { size, ...elementProps } = props;
+
   return (
     <h1
-      {...props}
-      className={variants({ size: props.size, className: props.className })}
+      {...elementProps}
+      className={variants({ size, className: elementProps.className })}
     >
-      {props.children}
+      {elementProps.children}
     </h1>
   );
 };

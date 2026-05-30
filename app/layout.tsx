@@ -22,7 +22,7 @@ export default function Layout(props: LayoutProps<"/">) {
     <html lang="th">
       <body
         className={cn(
-          "w-dvw h-dvh antialiased bg-slate-700",
+          "w-dvw h-dvh antialiased",
           rubik.variable,
           inter.variable,
         )}

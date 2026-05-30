@@ -4,16 +4,18 @@ import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const MdvTypographyBody = (props: MdvTypographyBodyProps) => {
+  const { size, bold, ...elementProps } = props;
+
   return (
     <p
-      {...props}
+      {...elementProps}
       className={variants({
-        size: props.size,
-        bold: props.bold,
-        className: props.className,
+        size,
+        bold,
+        className: elementProps.className,
       })}
     >
-      {props.children}
+      {elementProps.children}
     </p>
   );
 };

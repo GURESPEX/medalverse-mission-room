@@ -1,8 +1,9 @@
-import { type ClassValue, clsx } from "clsx";
+import { cx } from "class-variance-authority";
+import type { ClassValue } from "class-variance-authority/types";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]): string {
-  return twMerge(clsx(inputs));
+  return twMerge(cx(inputs));
 }
 
 export function RecordKeys<T extends string | number | symbol>(

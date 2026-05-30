@@ -4,42 +4,68 @@ import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
 const MdvTypographyHeading = (props: MdvTypographyHeadingProps) => {
-  switch (props.size ?? "heading-1") {
+  const { size, ...elementProps } = props;
+
+  switch (size) {
     case "heading-1":
       return (
         <h1
-          {...props}
-          className={variants({ size: props.size, className: props.className })}
+          {...elementProps}
+          className={variants({
+            size,
+            className: elementProps.className,
+          })}
         >
-          {props.children}
+          {elementProps.children}
         </h1>
       );
     case "heading-2":
       return (
         <h2
-          {...props}
-          className={variants({ size: props.size, className: props.className })}
+          {...elementProps}
+          className={variants({
+            size,
+            className: elementProps.className,
+          })}
         >
-          {props.children}
+          {elementProps.children}
         </h2>
       );
     case "heading-3":
       return (
         <h3
-          {...props}
-          className={variants({ size: props.size, className: props.className })}
+          {...elementProps}
+          className={variants({
+            size,
+            className: elementProps.className,
+          })}
         >
-          {props.children}
+          {elementProps.children}
         </h3>
       );
     case "heading-4":
       return (
         <h4
-          {...props}
-          className={variants({ size: props.size, className: props.className })}
+          {...elementProps}
+          className={variants({
+            size,
+            className: elementProps.className,
+          })}
         >
-          {props.children}
+          {elementProps.children}
         </h4>
+      );
+    default:
+      return (
+        <h1
+          {...elementProps}
+          className={variants({
+            size,
+            className: elementProps.className,
+          })}
+        >
+          {elementProps.children}
+        </h1>
       );
   }
 };
