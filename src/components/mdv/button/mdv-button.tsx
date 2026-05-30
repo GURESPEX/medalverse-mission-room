@@ -29,6 +29,7 @@ const MdvButton = (props: MdvButtonProps) => {
         rounded,
         loading,
         disabled,
+        iconOnly: !elementProps.children,
         className: elementProps.className,
       })}
     >
@@ -45,9 +46,11 @@ const MdvButton = (props: MdvButtonProps) => {
       ) : iconStart ? (
         <div className={iconButtonVariants({ size })}>{iconStart}</div>
       ) : null}
-      <div className={textButtonVariants({ size })}>
-        {elementProps.children}
-      </div>
+      {elementProps.children ? (
+        <div className={textButtonVariants({ size })}>
+          {elementProps.children}
+        </div>
+      ) : null}
       {loading &&
       (loadingIconVisible === "end" || loadingIconVisible === "both") ? (
         <div
@@ -71,6 +74,10 @@ export default React.memo(MdvButton);
 
 const variants = cva("flex items-center w-max select-none", {
   variants: {
+    iconOnly: {
+      true: null,
+      false: null,
+    },
     color: {
       primary: null,
       secondary: null,
@@ -78,9 +85,9 @@ const variants = cva("flex items-center w-max select-none", {
       danger: null,
     },
     size: {
-      large: "h-12 gap-mdv-md p-mdv-lg",
-      medium: "h-10 gap-mdv-md px-mdv-lg py-mdv-md",
-      small: "h-9 gap-mdv-md px-mdv-lg py-mdv-xs",
+      large: "gap-mdv-md",
+      medium: "gap-mdv-md",
+      small: "gap-mdv-md",
     },
     variant: {
       solid: null,
@@ -101,6 +108,36 @@ const variants = cva("flex items-center w-max select-none", {
     },
   },
   compoundVariants: [
+    {
+      iconOnly: true,
+      size: "large",
+      className: "p-mdv-lg",
+    },
+    {
+      iconOnly: true,
+      size: "medium",
+      className: "p-mdv-md",
+    },
+    {
+      iconOnly: true,
+      size: "small",
+      className: "p-mdv-sm",
+    },
+    {
+      iconOnly: false,
+      size: "large",
+      className: "h-12 p-mdv-lg",
+    },
+    {
+      iconOnly: false,
+      size: "medium",
+      className: "h-10 px-mdv-lg py-mdv-md",
+    },
+    {
+      iconOnly: false,
+      size: "small",
+      className: "h-9 px-mdv-lg py-mdv-xs",
+    },
     {
       rounded: true,
       size: ["small", "medium", "large"],
@@ -332,6 +369,7 @@ const variants = cva("flex items-center w-max select-none", {
     },
   ],
   defaultVariants: {
+    iconOnly: false,
     size: "medium",
     color: "primary",
     variant: "solid",

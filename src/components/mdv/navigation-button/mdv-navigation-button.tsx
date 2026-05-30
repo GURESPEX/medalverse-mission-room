@@ -33,9 +33,9 @@ const variants = cva(
     variants: {
       color: {
         primary:
-          "bg-transparent text-mdv-neutral-400 hover:bg-mdv-neutral-100 active:bg-mdv-neutral-200 active:text-mdv-neutral-500 rounded-mdv-md",
+          "bg-transparent text-mdv-neutral-400  hover:text-mdv-neutral-500 hover:bg-mdv-neutral-100 rounded-mdv-md",
         secondary:
-          "bg-transparent text-mdv-blue-400 hover:bg-mdv-blue-100 active:bg-mdv-blue-200 active:text-mdv-blue-500 rounded-mdv-md",
+          "bg-mdv-blue-100 text-mdv-blue-400  hover:text-mdv-blue-500 hover:bg-mdv-blue-200 rounded-mdv-md",
       },
     },
   },

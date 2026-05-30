@@ -126,3 +126,16 @@ export const IconBoth: Story = {
     disabled: false,
   },
 };
+
+export const IconOnly: Story = {
+  args: {
+    color: "primary",
+    variant: "solid",
+    size: "medium",
+    rounded: false,
+    iconStart: <LibraryBig />,
+    loadingIcon: <Loader />,
+    loading: false,
+    disabled: false,
+  },
+};
