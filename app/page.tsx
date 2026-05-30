@@ -1,4 +1,4 @@
-import Mdv from "@/src/components/ui/mdv";
+import MDV from "@/src/components/ui/mdv";
 
 const text = "The quick brown fox jumps over the lazy dog";
 
@@ -6,59 +6,59 @@ export default function Page() {
   return (
     <div className="flex size-full">
       {/* <div className="p-4">
-        <Mdv.SideBar />
+        <MDV.SideBar />
       </div>
       <div>
-        <Mdv.Button />
+        <MDV.Button />
       </div> */}
       <div className="flex flex-col">
-        <Mdv.Typography.Display size="large">{text}</Mdv.Typography.Display>
-        <Mdv.Typography.Display size="medium">{text}</Mdv.Typography.Display>
+        <MDV.Typography.Display size="large">{text}</MDV.Typography.Display>
+        <MDV.Typography.Display size="medium">{text}</MDV.Typography.Display>
 
-        <Mdv.Typography.Heading size="heading-1">{text}</Mdv.Typography.Heading>
-        <Mdv.Typography.Heading size="heading-2">{text}</Mdv.Typography.Heading>
-        <Mdv.Typography.Heading size="heading-3">{text}</Mdv.Typography.Heading>
-        <Mdv.Typography.Heading size="heading-4">{text}</Mdv.Typography.Heading>
+        <MDV.Typography.Heading size="heading-1">{text}</MDV.Typography.Heading>
+        <MDV.Typography.Heading size="heading-2">{text}</MDV.Typography.Heading>
+        <MDV.Typography.Heading size="heading-3">{text}</MDV.Typography.Heading>
+        <MDV.Typography.Heading size="heading-4">{text}</MDV.Typography.Heading>
 
-        <Mdv.Typography.Body size="large" bold="bold">
+        <MDV.Typography.Body size="large" bold="bold">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="medium" bold="bold">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="medium" bold="bold">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="small" bold="bold">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="small" bold="bold">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="large" bold="semibold">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="large" bold="semibold">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="medium" bold="semibold">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="medium" bold="semibold">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="small" bold="semibold">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="small" bold="semibold">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="large" bold="meduim">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="large" bold="medium">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="medium" bold="meduim">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="medium" bold="medium">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="small" bold="meduim">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="small" bold="medium">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="large" bold="regular">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="large" bold="regular">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="medium" bold="regular">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="medium" bold="regular">
           {text}
-        </Mdv.Typography.Body>
-        <Mdv.Typography.Body size="small" bold="regular">
+        </MDV.Typography.Body>
+        <MDV.Typography.Body size="small" bold="regular">
           {text}
-        </Mdv.Typography.Body>
+        </MDV.Typography.Body>
 
-        <Mdv.Typography.Caption overline>{text}</Mdv.Typography.Caption>
-        <Mdv.Typography.Caption>{text}</Mdv.Typography.Caption>
+        <MDV.Typography.Caption overline>{text}</MDV.Typography.Caption>
+        <MDV.Typography.Caption>{text}</MDV.Typography.Caption>
       </div>
     </div>
   );

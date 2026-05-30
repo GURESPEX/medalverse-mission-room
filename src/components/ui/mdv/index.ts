@@ -3,11 +3,11 @@ import MdvNavigationButton from "./navigation-button/mdv-navigation-button";
 import MdvSideBar from "./sidebar/mdv-sidebar";
 import MdvTypography from "./typography";
 
-const Mdv = {
+const MDV = {
   SideBar: MdvSideBar,
   Button: MdvButton,
   NavigationButton: MdvNavigationButton,
   Typography: MdvTypography,
 };
 
-export default Mdv;
+export default MDV;

@@ -5,12 +5,12 @@ import { cva, VariantProps } from "class-variance-authority";
 
 const MdvTypographyDisplay = (props: MdvTypographyDisplayProps) => {
   return (
-    <p
+    <h1
       {...props}
       className={variants({ size: props.size, className: props.className })}
     >
       {props.children}
-    </p>
+    </h1>
   );
 };
 
@@ -33,5 +33,5 @@ const variants = cva("font-mdv-display font-mdv-bold", {
 type MdvTypographyDisplayVariantProps = VariantProps<typeof variants>;
 
 export type MdvTypographyDisplayProps = React.PropsWithChildren<
-  React.ComponentProps<"p"> & MdvTypographyDisplayVariantProps
+  React.ComponentProps<"h1"> & MdvTypographyDisplayVariantProps
 >;
