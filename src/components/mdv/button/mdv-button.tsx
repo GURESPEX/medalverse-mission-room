@@ -21,7 +21,16 @@ const MdvButton = (props: MdvButtonProps) => {
 
   return (
     <button
-      className={variants({ color, variant, size, rounded, loading, disabled })}
+      {...elementProps}
+      className={variants({
+        color,
+        variant,
+        size,
+        rounded,
+        loading,
+        disabled,
+        className: elementProps.className,
+      })}
     >
       {loading &&
       (loadingIconVisible === "start" || loadingIconVisible === "both") ? (
@@ -339,7 +348,6 @@ export type MdvButtonProps = React.PropsWithChildren<
     MdvButtonVariantProps & {
       iconStart?: React.ReactNode;
       iconEnd?: React.ReactNode;
-      loading?: boolean;
       loadingIcon?: React.ReactNode;
       loadingIconVisible?: "start" | "end" | "both";
     }

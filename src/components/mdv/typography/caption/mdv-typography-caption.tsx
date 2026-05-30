@@ -26,7 +26,7 @@ export default React.memo(MdvTypographyCaption);
 const variants = cva("font-mdv-body text-mdv-xs leading-mdv-xs", {
   variants: {
     overline: {
-      true: "font-mdv-semibold",
+      true: "font-mdv-medium",
       false: "font-mdv-regular",
     },
   },
