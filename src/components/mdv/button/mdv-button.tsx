@@ -3,11 +3,11 @@
 import React from "react";
 import { cva, VariantProps } from "class-variance-authority";
 import { Loader } from "lucide-react";
-import { cn } from "@/src/lib/utils";
 
 const MdvButton = (props: MdvButtonProps) => {
   const {
     color,
+    variant = "solid",
     size = "medium",
     rounded = false,
     iconStart,
@@ -21,10 +21,7 @@ const MdvButton = (props: MdvButtonProps) => {
 
   return (
     <button
-      className={cn(variants({ color, size, rounded }), {
-        [loadingVariants({ color })]: loading,
-        [disabledVariants()]: disabled,
-      })}
+      className={variants({ color, variant, size, rounded, loading, disabled })}
     >
       {loading &&
       (loadingIconVisible === "start" || loadingIconVisible === "both") ? (
@@ -63,74 +60,233 @@ export default React.memo(MdvButton);
 
 // --- Variants ---
 
-const variants = cva(
-  "flex items-center w-max select-none hover:cursor-pointer",
-  {
-    variants: {
-      color: {
-        primary: "bg-mdv-blue-300 active:bg-mdv-blue-400 text-white",
-        secondary: "bg-mdv-neutral-50 active:bg-mdv-neutral-200 text-black",
-        danger: "bg-mdv-error-600 active:bg-mdv-error-700 text-white",
-      },
-      size: {
-        large: "h-12 gap-mdv-md p-mdv-lg",
-        medium: "h-10 gap-mdv-md px-mdv-lg py-mdv-md",
-        small: "h-9 gap-mdv-md px-mdv-lg py-mdv-xs",
-      },
-      rounded: {
-        true: null,
-        false: null,
-      },
+const variants = cva("flex items-center w-max select-none", {
+  variants: {
+    color: {
+      primary: null,
+      secondary: null,
+      danger: null,
     },
-    compoundVariants: [
-      {
-        rounded: true,
-        size: ["small", "medium", "large"],
-        className: "rounded-mdv-full",
-      },
-      {
-        rounded: false,
-        size: "small",
-        className: "rounded-mdv-xl",
-      },
-      {
-        rounded: false,
-        size: "medium",
-        className: "rounded-mdv-lg",
-      },
-      {
-        rounded: false,
-        size: "large",
-        className: "rounded-mdv-md",
-      },
-    ],
-    defaultVariants: {
-      size: "medium",
-      color: "primary",
+    size: {
+      large: "h-12 gap-mdv-md p-mdv-lg",
+      medium: "h-10 gap-mdv-md px-mdv-lg py-mdv-md",
+      small: "h-9 gap-mdv-md px-mdv-lg py-mdv-xs",
+    },
+    variant: {
+      solid: null,
+      outline: null,
+      ghost: null,
+    },
+    rounded: {
+      true: null,
+      false: null,
+    },
+    loading: {
+      true: null,
+      false: null,
+    },
+    disabled: {
+      true: null,
+      false: null,
+    },
+  },
+  compoundVariants: [
+    {
+      rounded: true,
+      size: ["small", "medium", "large"],
+      className: "rounded-mdv-full",
+    },
+    {
       rounded: false,
+      size: "small",
+      className: "rounded-mdv-xl",
     },
-  },
-);
-
-const loadingVariants = cva(
-  "flex items-center w-max select-none hover:cursor-wait",
-  {
-    variants: {
-      color: {
-        primary: "bg-mdv-blue-300 active:bg-mdv-blue-300 text-white",
-        secondary: "bg-mdv-neutral-50 active:bg-mdv-neutral-50 text-black",
-        danger: "bg-mdv-error-600 active:bg-mdv-error-600 text-white",
-      },
+    {
+      rounded: false,
+      size: "medium",
+      className: "rounded-mdv-lg",
     },
-    defaultVariants: {
+    {
+      rounded: false,
+      size: "large",
+      className: "rounded-mdv-md",
+    },
+    {
+      loading: false,
+      disabled: false,
+      className: "hover:cursor-pointer",
+    },
+    {
+      loading: true,
+      disabled: false,
+      className: "hover:cursor-wait",
+    },
+    {
+      loading: [true, false],
+      disabled: true,
+      className: "hover:cursor-not-allowed",
+    },
+    {
+      variant: "solid",
+      loading: [true, false],
+      disabled: true,
+      className:
+        "border border-mdv-neutral-300 bg-mdv-neutral-100 text-mdv-neutral-500",
+    },
+    {
+      variant: "solid",
       color: "primary",
+      loading: false,
+      disabled: false,
+      className: "bg-mdv-blue-300 active:bg-mdv-blue-400 text-white",
     },
-  },
-);
+    {
+      variant: "solid",
+      color: "primary",
+      loading: true,
+      disabled: false,
+      className: "bg-mdv-blue-300 text-white",
+    },
+    {
+      variant: "solid",
+      color: "secondary",
+      loading: false,
+      disabled: false,
+      className:
+        "bg-white border border-mdv-neutral-100 active:border-mdv-neutral-200 text-black active:bg-mdv-neutral-100",
+    },
+    {
+      variant: "solid",
+      color: "secondary",
+      loading: true,
+      disabled: false,
+      className: "bg-white border border-mdv-neutral-100 text-black",
+    },
+    {
+      variant: "solid",
+      color: "danger",
+      loading: false,
+      disabled: false,
+      className: "bg-mdv-error-600 active:bg-mdv-error-700 text-white",
+    },
+    {
+      variant: "solid",
+      color: "danger",
+      loading: true,
+      disabled: false,
+      className: "bg-mdv-error-600 active:bg-mdv-error-600 text-white",
+    },
 
-const disabledVariants = cva(
-  "border border-mdv-neutral-300 bg-mdv-neutral-100 active:bg-mdv-neutral-100 text-mdv-neutral-500 hover:cursor-not-allowed",
-);
+    {
+      variant: "outline",
+      loading: [true, false],
+      disabled: true,
+      className: "border border-mdv-neutral-300 text-mdv-neutral-500",
+    },
+    {
+      variant: "outline",
+      color: "primary",
+      loading: false,
+      disabled: false,
+      className:
+        "bg-white border border-mdv-blue-300 text-mdv-blue-300 active:bg-mdv-blue-100",
+    },
+    {
+      variant: "outline",
+      color: "primary",
+      loading: true,
+      disabled: false,
+      className: "bg-white border border-mdv-blue-300 text-mdv-blue-300",
+    },
+    {
+      variant: "outline",
+      color: "secondary",
+      loading: false,
+      disabled: false,
+      className:
+        "bg-white border border-mdv-neutral-100 active:border-mdv-neutral-200 text-black active:bg-mdv-neutral-100",
+    },
+    {
+      variant: "outline",
+      color: "secondary",
+      loading: true,
+      disabled: false,
+      className: "bg-white border border-mdv-neutral-100 text-black",
+    },
+    {
+      variant: "outline",
+      color: "danger",
+      loading: false,
+      disabled: false,
+      className:
+        "bg-white border border-mdv-error-600 text-mdv-error-600 active:bg-mdv-error-100",
+    },
+    {
+      variant: "outline",
+      color: "danger",
+      loading: true,
+      disabled: false,
+      className: "bg-white border border-mdv-error-600 text-mdv-error-600",
+    },
+
+    {
+      variant: "ghost",
+      loading: [true, false],
+      disabled: true,
+      className: "text-mdv-neutral-500",
+    },
+    {
+      variant: "ghost",
+      color: "primary",
+      loading: false,
+      disabled: false,
+      className: "bg-white text-mdv-blue-300 active:bg-mdv-blue-100",
+    },
+    {
+      variant: "ghost",
+      color: "primary",
+      loading: true,
+      disabled: false,
+      className: "bg-white text-mdv-blue-300",
+    },
+    {
+      variant: "ghost",
+      color: "secondary",
+      loading: false,
+      disabled: false,
+      className: "bg-white text-black active:bg-mdv-neutral-100",
+    },
+    {
+      variant: "ghost",
+      color: "secondary",
+      loading: true,
+      disabled: false,
+      className: "bg-white text-black",
+    },
+    {
+      variant: "ghost",
+      color: "danger",
+      loading: false,
+      disabled: false,
+      className: "bg-white text-mdv-error-600 active:bg-mdv-error-100",
+    },
+    {
+      variant: "ghost",
+      color: "danger",
+      loading: true,
+      disabled: false,
+      className: "bg-white text-mdv-error-600",
+    },
+  ],
+  defaultVariants: {
+    size: "medium",
+    color: "primary",
+    variant: "solid",
+    rounded: false,
+    loading: false,
+    disabled: false,
+  },
+});
 
 type MdvButtonVariantProps = VariantProps<typeof variants>;
 
