@@ -65,6 +65,7 @@ const variants = cva("flex items-center w-max select-none", {
     color: {
       primary: null,
       secondary: null,
+      dark: null,
       danger: null,
     },
     size: {
@@ -149,6 +150,20 @@ const variants = cva("flex items-center w-max select-none", {
     },
     {
       variant: "solid",
+      color: "dark",
+      loading: false,
+      disabled: false,
+      className: "bg-mdv-neutral-900 active:bg-mdv-neutral-900 text-white",
+    },
+    {
+      variant: "solid",
+      color: "dark",
+      loading: true,
+      disabled: false,
+      className: "bg-mdv-neutral-900 active:bg-mdv-neutral-900 text-white",
+    },
+    {
+      variant: "solid",
       color: "secondary",
       loading: false,
       disabled: false,
@@ -200,6 +215,21 @@ const variants = cva("flex items-center w-max select-none", {
     },
     {
       variant: "outline",
+      color: "dark",
+      loading: false,
+      disabled: false,
+      className:
+        "bg-white border border-mdv-neutral-900 text-mdv-neutral-900 active:bg-mdv-error-100",
+    },
+    {
+      variant: "outline",
+      color: "dark",
+      loading: true,
+      disabled: false,
+      className: "bg-white border border-mdv-neutral-900 text-mdv-neutral-900",
+    },
+    {
+      variant: "outline",
       color: "secondary",
       loading: false,
       disabled: false,
@@ -248,6 +278,20 @@ const variants = cva("flex items-center w-max select-none", {
       loading: true,
       disabled: false,
       className: "bg-white text-mdv-blue-300",
+    },
+    {
+      variant: "ghost",
+      color: "dark",
+      loading: false,
+      disabled: false,
+      className: "bg-white text-mdv-neutral-900",
+    },
+    {
+      variant: "ghost",
+      color: "dark",
+      loading: true,
+      disabled: false,
+      className: "bg-white text-mdv-neutral-900",
     },
     {
       variant: "ghost",
